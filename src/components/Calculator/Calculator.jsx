@@ -55,7 +55,7 @@ function AgeNumber() {
 function CatAge() {
   const { age } = useContext(AgeContext);
   if (age === 0 || age > 116)
-    return "Oops! Human age must be between 1 and 116";
+    return "Oops! 🙀 The age must be between 1 and 116";
   return (
     <div className="calculator__result">
       <div>
@@ -90,7 +90,7 @@ export default function Calculator() {
             />{" "}
             years old
           </div>
-          <div className="calculator__text">if I was a cat 😸 ...</div>
+          <div className="calculator__text">if I was a cat...</div>
           <CatAge />
         </div>
         <div className="right">

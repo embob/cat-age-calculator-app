@@ -1,5 +1,6 @@
+
 .App {
-  width: 70%;
+  width: 75%;
   margin: 0 auto;
   color: #404c66;
 }
@@ -7,9 +8,16 @@
 .App header {
   display: flex;
   justify-content: space-between;
+  margin: 32px 0 96px;
+  /* margin-bottom: 96px; */
 }
 
 .App__title {
   font-size: 36px;
-  margin-bottom: 40px;
+  margin: 0;
+}
+
+
+footer {
+  margin-top: 64px;
 }
