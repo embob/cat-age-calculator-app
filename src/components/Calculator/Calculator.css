@@ -1,0 +1,57 @@
+.calculator {
+  font-size: 60px;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+}
+
+.left {
+  flex-grow: 1;
+}
+
+.right {
+  flex: 0 0 488px;
+}
+
+img {
+  width: 100%;
+}
+
+.calculator input {
+  font-size: 60px;
+  padding: 16px;
+  font-weight: bold;
+  color: #E6509B;
+  caret-color: black;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #A6B2CC;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #A6B2CC;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #A6B2CC;
+}
+
+
+.calculator__input {
+  margin-bottom: 36px;
+}
+
+.calculator__text {
+  margin-bottom: 36px;
+}
+
+.calculator__result {
+  margin-bottom: 36px;
+}
+
+.calculator__age {
+  margin-bottom: 8px;
+}
