@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Calculator from "./components/Calculator/Calculator";
+import { Calculator } from "./components/Calculator/Calculator";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 

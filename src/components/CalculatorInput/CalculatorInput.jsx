@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CalculatorContext } from "../Calculator/Calculator";
 
-export default function CalculatorInput({ age, setAge }) {
+export default function CalculatorInput() {
+  const { age, setAge } = useContext(CalculatorContext);
+
   function handleInput(e) {
     setAge(Number.parseInt(e.target.value) || "");
   }

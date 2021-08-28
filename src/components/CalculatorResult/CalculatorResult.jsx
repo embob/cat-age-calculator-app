@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CalculatorContext } from "../Calculator/Calculator";
 
-function AgeNumber({age, months, years}) {
+function AgeNumber({ age, months, years }) {
   if (!age) return <span style={{ color: "#E6509B" }}>???</span>;
   const calculatedAge = !years ? `${months} months` : `${years} years`;
   return <span style={{ color: "#E6509B" }}>{calculatedAge}</span>;
 }
 
-function LifeStageLabel({age, lifeStage}) {
+function LifeStageLabel({ age, lifeStage }) {
   if (!age) return <div style={{ height: "79px" }}></div>;
   if (age > 116) return null;
   if (lifeStage !== "kitten") lifeStage += " cat";
@@ -14,8 +15,8 @@ function LifeStageLabel({age, lifeStage}) {
   return <div className="lifestage">{lifeStage}</div>;
 }
 
-export default function CalculatorResult({age, years, months, lifeStage}) {
-
+export default function CalculatorResult() {
+  const { age, months, years, lifeStage } = useContext(CalculatorContext);
   if (age === 0 || age > 116)
     return (
       <div className="calculator__oops">
@@ -28,7 +29,7 @@ export default function CalculatorResult({age, years, months, lifeStage}) {
     <div className="calculator__result">
       <div>
         <div className="calculator__age">
-          I would be <AgeNumber age={age} years={years} months={months}/> old
+          I would be <AgeNumber age={age} years={years} months={months} /> old
         </div>
         <LifeStageLabel age={age} lifeStage={lifeStage} />
       </div>
