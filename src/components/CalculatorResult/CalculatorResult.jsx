@@ -1,5 +1,4 @@
 import React from "react";
-import catCalculator from "cat-age-calculator";
 
 function AgeNumber({age, months, years}) {
   if (!age) return <span style={{ color: "#E6509B" }}>???</span>;
@@ -15,25 +14,7 @@ function LifeStageLabel({age, lifeStage}) {
   return <div className="lifestage">{lifeStage}</div>;
 }
 
-function getLifeStage(months, years) {
-  const lifeStages = new Map();
-  lifeStages.set("kitten", (months, years) => years === 0 && months < 7);
-  lifeStages.set("junior", (months, years) => years < 3);
-  lifeStages.set("adult", (months, years) => years < 7);
-  lifeStages.set("mature", (months, years) => years < 11);
-  lifeStages.set("senior", (months, years) => years < 15);
-  lifeStages.set("super senior", (months, years) => years > 14);
-
-  function matchLifeStage({ months, years }) {
-    for (let [key, value] of lifeStages) {
-      if (value(months, years)) return key;
-    }
-  }
-
-  return matchLifeStage({ months, years });
-}
-
-export default function CalculatorResult({age, setLifeStage}) {
+export default function CalculatorResult({age, years, months, lifeStage}) {
 
   if (age === 0 || age > 116)
     return (
@@ -43,9 +24,6 @@ export default function CalculatorResult({age, setLifeStage}) {
       </div>
     );
 
-  const { years, months } = catCalculator.getCatAgeObject(age);
-  const lifeStage = getLifeStage(months, years);
-  setLifeStage(lifeStage);
   return (
     <div className="calculator__result">
       <div>
