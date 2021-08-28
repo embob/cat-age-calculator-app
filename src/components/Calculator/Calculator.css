@@ -1,14 +1,19 @@
 .calculator {
-  font-size: 60px;
+  font-size: 56px;
   font-weight: bold;
   display: flex;
-  align-items: flex-end;
 }
 
+.calculator__first {
+  flex-grow: 1;
+}
 .left {
   flex-grow: 1;
 }
 
+.calculator__second {
+  flex: 0 0 488px;
+}
 .right {
   flex: 0 0 488px;
 }
@@ -18,7 +23,7 @@ img {
 }
 
 .calculator input {
-  font-size: 60px;
+  font-size: 56px;
   padding: 16px;
   font-weight: bold;
   color: #E6509B;
@@ -48,10 +53,10 @@ img {
   margin-bottom: 36px;
 }
 
-.calculator__result {
-  margin-bottom: 36px;
-}
-
 .calculator__age {
   margin-bottom: 8px;
+}
+
+.calculator__oops {
+  line-height: 1.25;
 }

@@ -1,16 +1,16 @@
-import "./App.css";
 import React from "react";
+import "./App.css";
 import Calculator from "./components/Calculator/Calculator";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <h1 className="App__title">💁‍♀️ Human to Cat age calculator 🐈</h1>
-        <a href="https://github.com/embob/cat-age-calculator-app">View the code on <span className="icon icon--github">Github</span></a>
-      </header>
+    <main className="app">
+      <Header />
       <Calculator />
-    </div>
+      <Footer />
+    </main>
   );
 }
 
