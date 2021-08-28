@@ -1,0 +1,21 @@
+footer {
+  margin-top: 72px;
+  display: flex;
+  align-items: center;
+  color: #5A6680;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+footer > * {
+  margin-right: 16px;
+}
+
+.footer__icon {
+  width: 30px;
+  height: 30px;
+}
+
+.footer__name {
+  color: #E6509B;
+}

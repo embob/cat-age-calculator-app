@@ -5,9 +5,9 @@ const AgeContext = React.createContext();
 
 function AgeNumber() {
   const { age } = useContext(AgeContext);
-  if (!age) return <span style={{ color: "hotpink" }}>???</span>;
+  if (!age) return <span className="calculated-age" style={{ color: "hotpink" }}>???</span>;
   const calculatedAge = catCalculator.getCatAgeString(age);
-  return <span style={{ color: "hotpink" }}>{calculatedAge}</span>;
+  return <span className="calculated-age" style={{ color: "hotpink" }}>{calculatedAge}</span>;
 }
 
 function AgeTitle() {
