@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Calculator.css";
+import "./Calculator.scss";
 import catCalculator from "cat-age-calculator";
 import getLifeStage from "../../utils/getLifeStage";
 import CalculatorInput from "../CalculatorInput/CalculatorInput";
