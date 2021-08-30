@@ -1,0 +1,29 @@
+@use '../../styles/colors' as *;
+@use './src/styles/responsive' as *;
+
+footer {
+  display: flex;
+  align-items: center;
+  color: $grey;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 48px;
+  @include media-breakpoint-up(md) {
+    margin-top: 72px;
+    font-size: 22px;
+  }
+}
+
+footer > * {
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer__name {
+  color: $pink;
+  @include media-breakpoint-only(xs) {
+    display: block;
+  }
+}

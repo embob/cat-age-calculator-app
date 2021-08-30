@@ -1,5 +1,36 @@
+@use './src/styles/colors' as *;
+@use './src/styles/responsive' as *;
+
 .app {
-  width: 68%;
-  margin: 0 auto;
-  color: #404c66;
+  color: $dark-grey;
+  margin: 0 32px;
+  @include media-breakpoint-up(md) {
+    width: 95%;
+    margin: 0 auto;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 90%;
+  }
+  @include media-breakpoint-up(xxl) {
+    width: 68%;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $light-grey;
+  opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: $light-grey;
+}
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: $light-grey;
 }

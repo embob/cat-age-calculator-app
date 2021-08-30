@@ -1,0 +1,93 @@
+@use '../../styles/colors' as *;
+@use './src/styles/responsive' as *;
+
+.calculator {
+  font-size: 26px;
+  font-weight: bold;
+  @include media-breakpoint-up(md) {
+    font-size: 32px;
+    display: flex;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 48px;
+    display: flex;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 56px;
+    display: flex;
+  }
+}
+
+.calculator__first {
+  @include media-breakpoint-up(md) {
+    flex-grow: 1;
+  }
+}
+
+.calculator__second {
+  @include media-breakpoint-up(md) {
+    flex: 0 0 240px;
+  }
+  @include media-breakpoint-only(md) {
+    display: flex;
+    align-items: center;
+  }
+  @include media-breakpoint-up(xl) {
+    flex: 0 0 320px;
+  }
+  @include media-breakpoint-up(xxl) {
+    flex: 0 0 488px;
+  }
+  img {
+    @include media-breakpoint-only(xs) {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.calculator input {
+  font-weight: bold;
+  color: $pink;
+  caret-color: black;
+  font-size: 40px;
+  padding: 8px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 40px;
+    padding: 16px;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 56px;
+  }
+}
+
+.calculator__input {
+  margin-bottom: 16px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 36px;
+  }
+}
+
+.calculator__text {
+  margin-bottom: 16px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 36px;
+  }
+}
+
+.calculator__age-text {
+  margin-bottom: 4px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 8px;
+  }
+}
+
+.calculator__age {
+  color: $pink;
+}
+
+.calculator__oops {
+  line-height: 1.25;
+}
